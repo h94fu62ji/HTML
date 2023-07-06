@@ -1,0 +1,20 @@
+h1{
+    color: #000;
+}
+p{
+    color: #00ffff;
+    font-size: 30px;
+}
+.box1{
+    background-color: #00ffff;
+    margin: 12px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+}.box2{
+    background-color: #40f658;
+    margin: 12px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+}

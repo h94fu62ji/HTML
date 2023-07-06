@@ -1,0 +1,35 @@
+body{
+    position: relative;
+    .sc {
+        width: 100px;height: 100px;
+        
+        border-radius: 50%;
+        position: fixed;
+    }
+    .b1{
+        border: 10px solid blue;
+        top: 100px;
+        left: 100px;
+    }
+    .b2{
+        border: 10px solid yellow;
+        top: 165px;
+        left: 165px;
+    }
+    .b3{
+        border: 10px solid black;
+        top: 100px;
+        left: 230px;
+    }
+    .b4{
+        border: 10px solid green;
+        top: 165px;
+        left: 295px;
+    }
+    .b5{
+        border: 10px solid red;
+        top: 100px;
+        left: 360px;
+    }
+
+}

@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #5c9fa2;
+}
+
+.area1 {
+  width: 100%;
+  height: 200px;
+  background-color: #8ad2d6;
+}
+
+.area2 {
+  display: flex;
+  justify-content: center;
+}
+.area2 .area3 {
+  display: flex;
+  width: 800px;
+  margin: 20px auto;
+}
+.area2 .area3 .sarea1 {
+  width: 25%;
+  height: 1000px;
+  background-color: #5c9fa2;
+}
+.area2 .area3 .big-box {
+  width: 75%;
+}
+.area2 .area3 .big-box .text-area {
+  height: 80px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.area2 .area3 .big-box .text-area h1 {
+  padding: 20px;
+}
+.area2 .area3 .big-box .text-area p {
+  padding: 20px 0;
+}
+.area2 .area3 .big-box .box-m {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.area2 .area3 .big-box .box-m .box {
+  width: 150px;
+  margin: 10px;
+}
+.area2 .area3 .big-box .box-m .box .product {
+  width: 150px;
+  height: 150px;
+  background-color: #5c9fa2;
+}
+.area2 .area3 .big-box .box-m .box p {
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #5c9fa2;
+}/*# sourceMappingURL=test4.css.map */

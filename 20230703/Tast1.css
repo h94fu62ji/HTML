@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.div1 {
+    background-color: #00FFFF;
+    height: 100px;
+    width: 524px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border: 2px solid black;
+}
+.img1 {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;;
+    margin-right: 24px;
+}
+.span1 {
+    margin-top: 36px;
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+}
+.inp1 {
+    width: 386px;
+    height: 20px;
+    margin-right: 18px;
+}
+.button1 {
+    width: 120px;
+    height: 20px;
+
+
+}

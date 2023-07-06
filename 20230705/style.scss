@@ -1,0 +1,95 @@
+
+.area0{
+    display: flex;
+    .mg{
+        width: 600px;height: 400px;
+        background-image: url(./animal-corgi-dog-58997.webp);
+        background-size: cover;
+
+    }
+}
+
+.big {
+    display: flex;
+}
+.HI {
+    width: 200px;height: 200px;
+    background-image: url(https://i2.wp.com/www.spaceadvisor.com/blog/wp-content/uploads/2018/08/animal-corgi-dog-58997.jpg?fit=2048%2C1365&ssl=1);
+    background-position: center;
+    // 不重複連續圖片
+    background-repeat: no-repeat;
+    // 圖片大小
+    background-size: contain;
+
+}
+.HI2 {
+    width: 200px;height: 200px;
+    background-image: url(./animal-corgi-dog-58997.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.HI3 {
+    width: 300px;
+}
+.HI4{
+    width: 50px;height: 50px;
+    background-color: cyan;
+    margin: 0;
+    position: relative;
+    left: 125px;
+    top: 50px;
+}
+
+
+.area1 {
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+    // 相對值
+    position: relative;
+    .box {
+        width: 100px;height: 100px;
+        // 絕對值
+        position: absolute;
+    }
+    .box1 {
+        background-color: greenyellow;
+        left: 150px;
+        top: 150px;
+        z-index: 2;
+    }
+    .box2 {
+        background-color: yellow;
+        left: 175px;
+        top: 125px;
+        z-index: 1;
+    }
+    .box3 {
+        background-color: red;
+        left: 200px;
+        top: 100px;
+    }
+    .box4 {
+        background-color: black;
+        // 固定值
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+.area2{
+    width: 500px;height: 400px;
+    margin: 0 auto;
+    .box{
+        width: 200px;height: 300px;
+        background-color: wheat;
+        margin: 0 auto;
+        background-image: url(./Cake/img/7.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+    }
+}
+

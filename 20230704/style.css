@@ -1,0 +1,26 @@
+*{
+    padding: 0;margin: 0px;
+}
+.big-div {
+    background-color: antiquewhite;
+    /* 水平軸 */
+    display: flex;
+    /* 水平至中 */
+    justify-content: space-between;
+    /* 垂直至中 */
+    align-items: center;
+}
+.box{
+    width: 100px;height: 100px;
+}
+.div1{
+    background-color: cyan;
+}
+.div2{
+    background-color: blueviolet;
+    height: 200px;
+}
+.div3{
+    background-color: salmon;
+}
+

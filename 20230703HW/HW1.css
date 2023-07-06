@@ -1,0 +1,38 @@
+* {
+    margin: 20;
+    padding: 0;
+    
+}
+
+.im1 {
+    height: 200px;
+    width: 200px;
+    margin-right: 24px;
+    border: 2px solid black;
+}
+
+.im2 {
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.di1 {
+    height: 200px;
+    width: 532px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border: 2px solid black;
+}
+
+.in1 {
+    height: 20px;
+    width: 386px;
+    margin-right: 18px;
+
+}
+
+.bu1 {
+    height: 20px;
+    width: 120px;
+}

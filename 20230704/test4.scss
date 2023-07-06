@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+$color1 : #5c9fa2;
+$color2 : #8ad2d6;
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: $color1;
+}
+.area1{
+    width: 100%;
+    height: 200px;
+    background-color: $color2;
+}
+.area2{
+    display: flex;
+    justify-content: center;
+    .area3{
+        display: flex;
+        width: 800px;
+        margin: 20px auto;
+        .sarea1{
+            width: 25%;
+            height: 1000px;
+            background-color: $color1;
+        }
+        .big-box{
+            width: 75%;
+            .text-area{
+                height: 80px;
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                h1{
+                    padding: 20px;
+                }
+                p{
+                    padding: 20px 0;
+                }
+            }
+            .box-m{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .box{
+                    width: 150px;
+                     
+                    margin: 10px;
+                    .product{
+                        width: 150px;height: 150px;
+                        background-color: $color1;
+                    }
+                    p{
+                        text-align: center;
+}}}}}}
+
+
+footer{
+    width: 100%;height: 100px;
+    background-color: $color1;
+}
