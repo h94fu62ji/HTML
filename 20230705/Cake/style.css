@@ -7,12 +7,13 @@ body {
   padding: 0;
   background-color: rgb(247, 240, 208);
   position: relative;
+  font-family: sans-serif, monospace;
 }
 
 header {
-  height: 150px;
+  height: 120px;
   width: 100%;
-  background-color: rgba(241, 233, 197, 0.8);
+  background-color: rgba(245, 222, 178, 0.8);
   position: fixed;
   z-index: 5;
 }
@@ -20,15 +21,57 @@ header .box {
   width: 75px;
   height: 75px;
   background-color: #E49E9E;
+  transition: 300ms;
+  cursor: pointer;
 }
-header img {
+header .box:hover {
+  scale: 1.02;
+  background-color: #F7CDC0;
+}
+header .box:active {
+  scale: 0.95;
+  transition: 10ms;
+}
+header .menu {
   width: 35px;
-  height: 35px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+  transition: 300ms;
+  cursor: pointer;
+  position: relative;
+}
+header .menu:hover {
+  scale: 1.05;
+}
+header .menu:active {
+  scale: 0.95;
+  transition: 10ms;
+}
+header .menu::before, header .menu::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  position: absolute;
+}
+header .menu::before {
+  top: -10px;
+}
+header .menu::after {
+  top: 10px;
+}
+
+.area0 {
+  width: 800px;
+  height: 150px;
+  margin: 0 auto;
 }
 
 .fake {
-  width: 700px;
-  height: 150px;
+  width: 600px;
+  height: 120px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -47,6 +90,7 @@ header img {
 .area1 img {
   width: 400px;
   height: 300px;
+  box-shadow: 0 3px 5px rgb(87, 87, 87);
 }
 
 .area2 {
@@ -68,6 +112,7 @@ header img {
   background-position: center;
   margin: 20px 0;
   position: relative;
+  box-shadow: 0 3px 5px rgb(87, 87, 87);
 }
 .area2 .OnSale .box .sbox {
   width: 120px;
@@ -76,15 +121,25 @@ header img {
   position: absolute;
   bottom: 20px;
   left: 40px;
+  transition: 300ms;
+  cursor: pointer;
 }
 .area2 .OnSale .box .sbox p {
   color: white;
   font-size: 20px;
   padding: 8px;
 }
+.area2 .OnSale .box .sbox:hover {
+  background-color: #F7CDC0;
+  scale: 1.02;
+}
+.area2 .OnSale .box .sbox:active {
+  scale: 0.95;
+  transition: 10ms;
+}
 
 .blackLine {
-  width: 900px;
+  width: 800px;
   height: 2px;
   background-color: black;
   margin: 0 auto;
@@ -127,24 +182,44 @@ header img {
   height: 30px;
   background-color: black;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 20px;
+  transition: 300ms;
+  cursor: pointer;
 }
 .area3 .News .box .mbox .sbox p {
   color: white;
   font-size: 20px;
   padding: 5px;
 }
-.area3 .More {
+.area3 .News .box .mbox .sbox:hover {
+  background-color: #6f6f6f;
+  scale: 1.02;
+}
+.area3 .News .box .mbox .sbox:active {
+  scale: 0.95;
+  transition: 10ms;
+}
+.area3 .sbox {
   width: 120px;
   height: 40px;
   background-color: #E49E9E;
   margin: 0 auto;
+  transition: 300ms;
+  cursor: pointer;
 }
-.area3 .More p {
+.area3 .sbox p {
   color: white;
   font-size: 20px;
   padding: 8px;
+}
+.area3 .sbox:hover {
+  background-color: #F7CDC0;
+  scale: 1.02;
+}
+.area3 .sbox:active {
+  scale: 0.95;
+  transition: 10ms;
 }
 
 .area4 {
@@ -167,24 +242,37 @@ header img {
   z-index: 3;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .area4 .box2 .box3 {
   width: 400px;
   height: 270px;
   background-size: cover;
   z-index: 4;
+  box-shadow: 2px 2px 10px black;
 }
 .area4 .box2 .box4 {
   width: 220px;
   height: 270px;
   background-color: #F7CDC0;
+  margin-left: 50px;
 }
 .area4 .box2 .box4 h1 {
+  font-size: 26px;
   text-align: center;
   padding: 20px;
 }
 .area4 .box2 .box4 p {
-  padding: 0 20px;
+  font-size: 16px;
+  padding: 0 25px;
+}
+.area4 .box2 .box5 {
+  width: 50vw;
+  height: 400px;
+  background-color: #E49E9E;
+  position: absolute;
+  right: 50%;
+  top: -65px;
 }
 
 footer {
@@ -194,4 +282,9 @@ footer {
 footer p {
   padding: 25px 0;
   font-size: 15px;
+}
+
+.but {
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgb(87, 87, 87);
 }/*# sourceMappingURL=style.css.map */
