@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: wheat;">
+    <div style="width: 400px;height: 500px;margin: 80px auto;background-color: white;border-radius: 20px;box-shadow: 4px 4px 8px black;">
+    
+        <h2 id="tit" style="text-align: center;padding: 50px;">猜一個數字</h2>
+
+
+
+        <div style="display: flex;justify-content: space-around;">
+            <h1 id="start"></h1>
+            <h1 id="stop">-</h1>
+            <h1 id="end"></h1>
+        </div>
+
+
+
+        <input id="input1" type="number" style="display:block; margin:120px auto 0 auto;height: 30px;width: 180px;border-radius: 5px;">
+
+
+        <button id="but1" type="button" >回答</button>
+    
+    
+    
+    </div>
+    
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    h1{
+        font-size: 50px;
+    }
+    button{
+        display: block;
+        margin: 50px auto 0 auto;
+        font-size: 26px;
+        border-radius: 5px;
+        width: 120px;height: 40px;
+        background-color: wheat;
+        &:hover{
+            background-color: rgb(211, 190, 152);
+        }
+        &:active{
+            background-color: #b88a8a;
+        }
+    }
+</style>

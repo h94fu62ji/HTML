@@ -23,7 +23,7 @@ a = Math.round(Math.random()*3)
 // }
 
 
-start =1
+start = 10
 end = 101
 l = []
 for(j = start ; j <= end ; j++){
@@ -40,5 +40,7 @@ for(j = start ; j <= end ; j++){
         // console.log(j)
         l.push(j)
     }
+    
 }
 console.log(l)
+
