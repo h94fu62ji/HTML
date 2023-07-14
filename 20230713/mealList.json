@@ -1,0 +1,90 @@
+[
+    {
+        "name": "食在一方",
+        "category": ["brunch"]
+    },
+    {
+        "name": "日十",
+        "category": ["brunch"]
+    },
+    {
+        "name": "鹽行棧",
+        "category": ["buffet", "rice"]
+    },
+    {
+        "name": "鍋燒意麵",
+        "category": ["noodle"]
+    },
+    {
+        "name": "炒飯",
+        "category": ["rice"]
+    },
+    {
+        "name": "八方雲集",
+        "category": ["others"]
+    },
+    {
+        "name": "火鍋",
+        "category": ["others"]
+    },
+    {
+        "name": "韓式料理",
+        "category": ["rice", "noodle"]
+    },
+    {
+        "name": "小飯糰大飯糰",
+        "category": ["rice"]
+    },
+    {
+        "name": "古早味肉羹",
+        "category": ["rice", "noodle"]
+    },
+    {
+        "name": "魚耶",
+        "category": ["brunch", "rice", "noodle"]
+    },
+    {
+        "name": "吳家鴨香飯",
+        "category": ["rice", "noodle"]
+    },
+    {
+        "name": "施家雞肉飯",
+        "category": ["rice"]
+    },
+    {
+        "name": "黑盤",
+        "category": ["rice", "noodle"]
+    },
+    {
+        "name": "神武拉麵",
+        "category": ["noodle"]
+    },
+    {
+        "name": "森井丼飯",
+        "category": ["rice"]
+    },
+    {
+        "name": "雙醬咖哩",
+        "category": ["rice"]
+    },
+    {
+        "name": "麺や青鈴",
+        "category": ["noodle"]
+    },
+    {
+        "name": "買當勞",
+        "category": ["others"]
+    },
+    {
+        "name": "壽司郎",
+        "category": ["others"]
+    },
+    {
+        "name": "一品屋",
+        "category": ["rice"]
+    },
+    {
+        "name": "豆哥牛排",
+        "category": ["noodle","others"]
+    }
+]
