@@ -107,6 +107,8 @@ in3El = document.getElementById("in3")
 in4El = document.getElementById("in4")
 in5El = document.getElementById("in5")
 
+intc = ["brunch","rice","noodle","buffet","others"]
+
 function Newmeal(item,category){
     x = {}
     x["name"] = item
@@ -119,7 +121,7 @@ function Newmeal(item,category){
 
 butEl.addEventListener("click",function(){
     
-    intc = ["brunch","rice","noodle","buffet","others"]
+
     int = [in1El,in2El,in3El,in4El,in5El]
     choese = []
     count = 0
@@ -128,7 +130,11 @@ butEl.addEventListener("click",function(){
         if (int[i].checked){
             for (j = 0; j < mealList.length ; j++){
                 if ( mealList[j].category.includes(intc[i]) ){
-                    choese.push(mealList[j].name) 
+                    if(choese.includes(mealList[j].name)){
+                    }
+                    else{
+                        choese.push(mealList[j].name)
+                    }
                 }
             }
             count++
@@ -151,19 +157,33 @@ butEl.addEventListener("click",function(){
 
 
 butEl2.addEventListener("click",function(){
-    intc = ["brunch","rice","noodle","buffet","others"]
-    int = [in1El,in2El,in3El,in4El,in5El]
-    add = []
-    for (i = 0; i < int.length; i++){
-       if (int[i].checked){
-           add.push(intc[i])
-       }
+    input = inputEl.value
+    count = 0
+    if(input.length <= 0){
+        ansEl.innerText = "請輸入內容"
     }
-    Newmeal(inputEl.value,add)
+    else{
+        mealList.forEach(function(item){
+            if(input == item.name){
+                count++
+            }
+        })
+        if(count > 0){
+            ansEl.innerText = "新增失敗 已存在"
+        }
+        else{
+            int = [in1El,in2El,in3El,in4El,in5El]
+            add = []
+            for (i = 0; i < int.length; i++){
+                if (int[i].checked){
+                    add.push(intc[i])
+                }
+            }
+            Newmeal(inputEl.value,add)
 
-    inputEl.value = ""
+            inputEl.value = ""
 
-    ansEl.innerText = "新增成功"
-    
-    
+            ansEl.innerText = "新增成功"
+        }
+    }   
 })
