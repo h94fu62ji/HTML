@@ -20,7 +20,7 @@
 
 <style lang="scss" scoped>
 .bl{
-  width: 700px;
+  width: 600px;
   height: 1.75px;
   background-color: black;
   margin: 0 auto;
