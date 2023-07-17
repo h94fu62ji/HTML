@@ -1,0 +1,21 @@
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1 to main
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: checkout: moving from c7847ff70811ee3434ede99d779e3b63002df0b4 to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33mc7847ff[m HEAD@{2}: checkout: moving from 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1 to c7847ff70811ee3434ede99d779e3b63002df0b4
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: checkout: moving from 1795fa1316e2f82f5b2c11f7a31e4d4fbc551d26 to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33m1795fa1[m HEAD@{4}: commit: 20230717
+[33m512c1f5[m HEAD@{5}: commit: 20230717
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{6}: checkout: moving from 58c2dea92e90f0fe03d1a5542a35fb6319f6a786 to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33m58c2dea[m HEAD@{7}: checkout: moving from 20a32c8e7efbeab87c477cdaf18ff0ca33374aa7 to 58c2dea92e90f0fe03d1a5542a35fb6319f6a786
+[33m20a32c8[m HEAD@{8}: commit: 20230717
+[33m7aec9c1[m HEAD@{9}: commit: 20230717
+[33m58c2dea[m HEAD@{10}: commit: 20230714
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{11}: checkout: moving from main to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{12}: checkout: moving from 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1 to main
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{13}: checkout: moving from c7847ff70811ee3434ede99d779e3b63002df0b4 to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33mc7847ff[m HEAD@{14}: checkout: moving from 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1 to c7847ff70811ee3434ede99d779e3b63002df0b4
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{15}: checkout: moving from main to 5f1308d1e7b9f78ba7b5051f235758bbda0ce1b1
+[33m5f1308d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{16}: commit: 20230714
+[33mc7847ff[m HEAD@{17}: commit: 20230714
+[33mb1d1174[m HEAD@{18}: commit: 20230713
+[33m135312b[m HEAD@{19}: commit: 20230711
+[33mff5bef2[m HEAD@{20}: commit (initial): Initial commit
