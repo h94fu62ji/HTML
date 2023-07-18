@@ -1,0 +1,32 @@
+<script>
+// vue-router 處理網址
+import { RouterLink ,RouterView } from 'vue-router'
+// 預設輸出
+export default {
+
+}
+</script>
+
+<template>
+
+    <header>
+        <!-- 網址 /代表首頁 -->
+        <RouterLink class="link" to="/">V-model</RouterLink>
+        <RouterLink class="link" to="/V-text">V-text</RouterLink>
+    </header>
+
+</template>
+
+
+<style lang="scss" scoped>
+header{
+    widows: 100%;
+    background-color: #17b782;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+}
+.link{
+    margin: 0 .5rem;
+}
+</style>
+
