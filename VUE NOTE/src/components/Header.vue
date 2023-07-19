@@ -13,6 +13,10 @@ export default {
         <!-- 網址 /代表首頁 -->
         <RouterLink class="link" to="/">V-model</RouterLink>
         <RouterLink class="link" to="/V-text">V-text</RouterLink>
+        <RouterLink class="link" to="/V-for">V-for</RouterLink>
+        <RouterLink class="link" to="/V-if&V-show">V-if & V-show</RouterLink>
+        <RouterLink class="link" to="/V-bind">V-bind</RouterLink>
+
     </header>
 
 </template>
@@ -27,6 +31,13 @@ header{
 }
 .link{
     margin: 0 .5rem;
+    text-decoration: none;
+    &:hover{
+        scale: 1.02;
+    }
+    &:active{
+        scale: .98;
+    }
 }
 </style>
 
