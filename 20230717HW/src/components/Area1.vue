@@ -1,4 +1,4 @@
-<script setup>
+<script>
 </script>
 
 <template>
@@ -24,7 +24,7 @@
         padding: 30px;
     }
     .photo{
-        background-image: url(../../public/1.png) ;
+        background-image: url(../assets/1.png) ;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right;

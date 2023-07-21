@@ -36,7 +36,7 @@ export default{
     <h1>V-for</h1>
 
     <ul>
-        <li v-for="(item,index) in arr">{{ index + " " + item }}</li>
+        <li v-for="(item,index) in arr" :key="index">{{ index + " " + item }}</li>
     </ul>
 
     <ul v-for="item in arr2">

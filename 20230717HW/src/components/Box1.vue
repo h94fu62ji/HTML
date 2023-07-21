@@ -1,9 +1,16 @@
-<script setup>
+<script>
 import but from "./Button1.vue"
+export default{
+    components:{
+        but
+    },
+    props:["photo"],
+    
+}
 </script>
 
 <template>
-    <div class="box">
+    <div class="box" :style="photo">
         <but class="abs"/>
     </div>
 </template>

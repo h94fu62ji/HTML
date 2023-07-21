@@ -24,7 +24,7 @@
     .photo{
         width: 60%;
         height: 250px;
-        background-image: url(../../public/8.png);
+        background-image: url(../assets/8.png);
         z-index: 1;
         background-size: cover;
         background-repeat: no-repeat;

@@ -16,6 +16,10 @@ export default {
         <RouterLink class="link" to="/V-for">V-for</RouterLink>
         <RouterLink class="link" to="/V-if&V-show">V-if & V-show</RouterLink>
         <RouterLink class="link" to="/V-bind">V-bind</RouterLink>
+        <RouterLink class="link" to="/V-on">V-on</RouterLink>
+        <RouterLink class="link" to="/Props">Props</RouterLink>
+        <RouterLink class="link" to="/Emit">Emit</RouterLink>
+        <RouterLink class="link" to="/Provide&Inject">Provide & Inject</RouterLink>
 
     </header>
 

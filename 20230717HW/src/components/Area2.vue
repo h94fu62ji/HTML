@@ -1,13 +1,25 @@
-<script setup>
+<script>
 import box from "./Box1.vue"
+export default{
+    components:{
+        box
+    },
+    data() {
+        return {
+            imgUrl:[
+                'background-image: url(./../public/2.png)',
+                'background-image: url(./../public/3.png)',
+                'background-image: url(./../public/4.png)',
+            ]
+        }
+    },
+}
 </script>
 
 <template>
     <h1>On Sale</h1>
     <div class="area">
-        <box style="background-image: url(../../public/2.png);"/>
-        <box style="background-image: url(../../public/3.png);"/>
-        <box style="background-image: url(../../public/4.png);"/>
+        <box v-for="item in imgUrl" :photo="item"/>
     </div>
 </template>
 

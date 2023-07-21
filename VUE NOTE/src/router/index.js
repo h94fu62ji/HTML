@@ -25,13 +25,33 @@ const router = createRouter({
     },
     {
       path: '/V-if&V-show',
-      name: 'VIfAndVShow',
-      component: () => import("../views/VIfAndVShow.vue")
+      name: 'VIf&VShow',
+      component: () => import("../views/VIf&VShow.vue")
     },
     {
       path: '/V-bind',
       name: 'VBind',
       component: () => import("../views/VBind.vue")
+    },
+    {
+      path: '/V-on',
+      name: 'VOn',
+      component: () => import("../views/VOn.vue")
+    },
+    {
+      path: '/Props',
+      name: 'Props',
+      component: () => import("../views/Props.vue")
+    },
+    {
+      path: '/Emit',
+      name: 'Emit',
+      component: () => import("../views/Emit.vue")
+    },
+    {
+      path: '/Provide&Inject',
+      name: 'Provide&Inject',
+      component: () => import("../views/Provide&Inject.vue")
     },
 
   ]

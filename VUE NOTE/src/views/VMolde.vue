@@ -12,7 +12,10 @@ export default{
       text: "Hello everymeow!!!",
       num: null,
       lazyText: "",
-      trimText: ""
+      trimText: "",
+      meal:[],
+      radioMeal: null,
+      
     }
   }
 }
@@ -36,5 +39,33 @@ export default{
   <h2>V-model.trim</h2>
   <p>{{ trimText }}</p>
   <input v-model.trim="trimText" type="text" />
+
+  <h2>Checkbox</h2>
+  <!-- 多選 -->
+  <div>
+    <input type="checkbox" name="meal" value="早餐" v-model="meal" id="breakfast">
+    <label for="breakfast">早餐</label>
+
+    <input type="checkbox" name="meal" value="中餐" v-model="meal" id="lunch">
+    <label for="lunch">中餐</label>
+
+    <input type="checkbox" name="meal" value="晚餐" v-model="meal" id="dinner">
+    <label for="dinner">晚餐</label>
+  </div>
+  <p>{{ meal }}</p>
+
+
+  <h2>Radio</h2>
+  <!-- 單選 -->
+  <div>
+    <input type="radio" id="breakfast2" name="radioMeal" value="早餐" v-model="radioMeal">
+    <label for="breakfast2">早餐</label>
+    <input type="radio" id="lunch2" name="radioMeal" value="午餐" v-model="radioMeal">
+    <label for="lunch2">午餐</label>
+    <input type="radio" id="dinner2" name="radioMeal" value="晚餐" v-model="radioMeal">
+    <label for="dinner2">晚餐</label>
+  </div>
+  
+
 
 </template>

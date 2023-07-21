@@ -1,9 +1,16 @@
-<script setup>
+<script>
 import but from "./Button2.vue"
+export default{
+    components:{
+        but
+    },
+    props:["photo"],
+}
+
 </script>
 
 <template>
-    <div class="box">
+    <div class="box" :style="photo">
         <div class="img"></div>
         <div class="text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, in?</p>
