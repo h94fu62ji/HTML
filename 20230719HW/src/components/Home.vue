@@ -69,15 +69,63 @@ export default {
             this.allSave += "9";
             this.end();
         },
+        zero(){
+            this.frist();
+            this.save += "0";
+            this.allSave += "0";
+            this.end();
+        },
+        zerozero(){
+            this.frist();
+            this.save += "00";
+            this.allSave += "00";
+            this.end();
+        },
         ac(){
             this.save = "0"
             this.view = "0"
             this.allSave = "0"
             this.end();
         },
+        del(){
+            this.save = this.save.slice(0,this.save.length-1)
+            this.allSave = this.save.slice(0,this.allSave.length-1)
+            this.end();
+        },
         plus(){
             this.frist();
             this.save += "+"
+            this.allSave += "+"
+            this.end();
+        },
+        minus(){
+            this.frist();
+            this.save += "-"
+            this.allSave += "-"
+            this.end();
+        },
+        times(){
+            this.frist();
+            this.save += "*"
+            this.allSave += "*"
+            this.end();
+        },
+        divided(){
+            this.frist();
+            this.save += "/"
+            this.allSave += "/"
+            this.end();
+        },
+        dot(){
+            this.frist();
+            this.save += "."
+            this.allSave += "."
+            this.end();
+        },
+        equal(){
+            this.frist();
+            this.save = eval(this.save)
+            this.allSave = eval(this.allSave)
             this.end();
         },
         end(){
@@ -113,22 +161,22 @@ export default {
             <button @click="seven" type="button">7</button>
             <button @click="eight" type="button">8</button>
             <button @click="nine" type="button">9</button>
-            <button type="button" value="÷" class="color1">÷</button>
+            <button @click="divided" type="button" value="÷" class="color1">÷</button>
             <button @click="four" type="button">4</button>
             <button @click="five" type="button">5</button>
             <button @click="six" type="button">6</button>
-            <button type="button" class="color1">×</button>
+            <button @click="times" type="button" class="color1">×</button>
             <button @click="one" type="button">1</button>
             <button @click="two" type="button">2</button>
             <button @click="three" type="button">3</button>
             <button @click="plus" type="button" value="+" class="color1">＋</button>
-            <button type="button">0</button>
-            <button type="button">00</button>
-            <button type="button">.</button>
-            <button type="button" class="color1">－</button>
+            <button @click="zero" type="button">0</button>
+            <button @click="zerozero" type="button">00</button>
+            <button @click="dot" type="button">.</button>
+            <button @click="minus" type="button" class="color1">－</button>
             <button @click="ac" type="button" class="color2">AC</button>
-            <button type="button" class="color2">⇤</button>
-            <button type="button" class="equal">=</button>
+            <button @click="del" type="button" class="color2">⇤</button>
+            <button @click="equal" type="button" class="equal" >=</button>
         </div>
     </div>
 </template>
