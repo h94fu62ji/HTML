@@ -20,6 +20,9 @@ export default {
         <RouterLink class="link" to="/Props">Props</RouterLink>
         <RouterLink class="link" to="/Emit">Emit</RouterLink>
         <RouterLink class="link" to="/Provide&Inject">Provide & Inject</RouterLink>
+        <RouterLink class="link" to="/Watch&Computed">Watch & Computed</RouterLink>
+        <RouterLink class="link" to="/Vue-router">Vue-router</RouterLink>
+        <RouterLink class="link" to="/Router-push">Router-push</RouterLink>
 
     </header>
 

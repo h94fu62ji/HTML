@@ -53,6 +53,37 @@ const router = createRouter({
       name: 'Provide&Inject',
       component: () => import("../views/Provide&Inject.vue")
     },
+    {
+      path: '/Watch&Computed',
+      name: 'Watch&Computed',
+      component: () => import("../views/WatchAndComputed.vue")
+    },
+    {
+      path: '/Vue-router',
+      name: 'VueRouter',
+      component: () => import("../views/VueRouter.vue"),
+      children:[
+        {
+        path : "com-c",
+        component: () => import("../components/ComC.vue"),
+        },
+        {
+        path : "com-d",
+        component: () => import("../components/ComD.vue"),
+        },
+      ]
+    },
+    {
+      path: '/Router-push',
+      name: 'RouterPush',
+      component: () => import("../views/RouterPush.vue")
+    },
+    {
+      path: '/Router-props/:propText',
+      name: 'RouterProps',
+      component: () => import("../views/RouterProps.vue"),
+      props:true,
+    },
 
   ]
 })

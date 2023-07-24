@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-    <h1>Provide&Inject</h1>
+    <h1>Provide & Inject</h1>
     <div class="container">
         <ComA/>
     </div>
