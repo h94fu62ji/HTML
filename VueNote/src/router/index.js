@@ -84,6 +84,11 @@ const router = createRouter({
       component: () => import("../views/RouterProps.vue"),
       props:true,
     },
+    {
+      path: '/File-reader',
+      name: 'FileReader',
+      component: () => import("../views/FileReader.vue"),
+    },
 
   ]
 })

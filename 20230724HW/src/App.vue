@@ -17,7 +17,7 @@ export default {
     .then((res) => res.json())
     .then((data) => {
       let datalist = data.records.location;
-      let cityindex = [5,4,6,15,7,10,12,17];
+      let cityindex = [5,4,6,15,7,12,10,17];
       // console.log(datalist)
       for(let i = 0 ; i < 4 ; i++){
         this.cityList.push(

@@ -23,6 +23,7 @@ export default {
         <RouterLink class="link" to="/Watch&Computed">Watch & Computed</RouterLink>
         <RouterLink class="link" to="/Vue-router">Vue-router</RouterLink>
         <RouterLink class="link" to="/Router-push">Router-push</RouterLink>
+        <RouterLink class="link" to="/File-reader">Fire-reader</RouterLink>
 
     </header>
 
