@@ -1,15 +1,36 @@
 <script>
 // vue-router 處理網址
 import { RouterLink ,RouterView } from 'vue-router'
+// Pinia 方法
+import { mapState , mapActions } from 'pinia';
+import indexStatus from '../store/indexStatus';
 // 預設輸出
 export default {
-
+    data() {
+        return {
+            
+        }
+    },
+    computed: {
+        // 參數 資料庫 要取用的 state / getters
+        ...mapState(indexStatus,["location","locationInfo"])
+    },
+    methods: {
+        // 參數 資料庫 要取用的 actions(methods)
+        ...mapActions(indexStatus,["getLocation"])
+    },
+    mounted() {
+        // console.log(this.location);
+        // console.log(this.locationInfo);      
+        this.getLocation() 
+    },
 }
 </script>
 
 <template>
 
     <header>
+
         <!-- 網址 /代表首頁 -->
         <RouterLink class="link" to="/">V-model</RouterLink>
         <RouterLink class="link" to="/V-text">V-text</RouterLink>
@@ -24,6 +45,8 @@ export default {
         <RouterLink class="link" to="/Vue-router">Vue-router</RouterLink>
         <RouterLink class="link" to="/Router-push">Router-push</RouterLink>
         <RouterLink class="link" to="/File-reader">Fire-reader</RouterLink>
+        
+        <p>{{ locationInfo }}</p>
 
     </header>
 
@@ -40,12 +63,8 @@ header{
 .link{
     margin: 0 .5rem;
     text-decoration: none;
-    &:hover{
-        scale: 1.02;
-    }
-    &:active{
-        scale: .98;
-    }
+    color: #FFF;
+    user-select: none;
 }
 </style>
 
