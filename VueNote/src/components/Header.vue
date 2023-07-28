@@ -32,19 +32,19 @@ export default {
     <header>
 
         <!-- 網址 /代表首頁 -->
-        <RouterLink class="link" to="/">V-model</RouterLink>
-        <RouterLink class="link" to="/V-text">V-text</RouterLink>
-        <RouterLink class="link" to="/V-for">V-for</RouterLink>
-        <RouterLink class="link" to="/V-if&V-show">V-if & V-show</RouterLink>
-        <RouterLink class="link" to="/V-bind">V-bind</RouterLink>
-        <RouterLink class="link" to="/V-on">V-on</RouterLink>
-        <RouterLink class="link" to="/Props">Props</RouterLink>
-        <RouterLink class="link" to="/Emit">Emit</RouterLink>
-        <RouterLink class="link" to="/Provide&Inject">Provide & Inject</RouterLink>
-        <RouterLink class="link" to="/Watch&Computed">Watch & Computed</RouterLink>
-        <RouterLink class="link" to="/Vue-router">Vue-router</RouterLink>
-        <RouterLink class="link" to="/Router-push">Router-push</RouterLink>
-        <RouterLink class="link" to="/File-reader">Fire-reader</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 1}" to="/">V-model</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 2}" to="/V-text">V-text</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 3}" to="/V-for">V-for</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 4}" to="/V-if&V-show">V-if & V-show</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 5}" to="/V-bind">V-bind</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 6}" to="/V-on">V-on</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 7}" to="/Props">Props</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 8}" to="/Emit">Emit</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 9}" to="/Provide&Inject">Provide & Inject</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 10}" to="/Watch&Computed">Watch & Computed</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 11}" to="/Vue-router">Vue-router</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 12}" to="/Router-push">Router-push</RouterLink>
+        <RouterLink class="link" :class="{'local':location === 13}" to="/File-reader">Fire-reader</RouterLink>
         
         <p>{{ locationInfo }}</p>
 
@@ -65,6 +65,12 @@ header{
     text-decoration: none;
     color: #FFF;
     user-select: none;
+}
+.local{
+    background-color: #FFF;
+    color: #17b782;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 </style>
 

@@ -44,5 +44,5 @@ console.log("A物件");
 console.log(a);
 
 // 狀態管理工具 => 整個網站(全域)的狀態/變數
-// Vuex 複雜、功能多
+// Vuex 複雜、功能多 
 // pinia => Vue 開發組其中一個仁開發的

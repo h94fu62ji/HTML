@@ -5,7 +5,7 @@ import { defineStore } from "pinia";
 export default defineStore("indexStatus",{
     // data
     state:() => ({
-        location: 1
+        location: 10
     }),
     // computed
     getters: {
@@ -14,7 +14,10 @@ export default defineStore("indexStatus",{
     // methods
     actions: {
         getLocation() {
-            console.log(this.location)
+            console.log(this.location);
+        },
+        setLocation(num) {
+            this.location = num;
         }
     }
 

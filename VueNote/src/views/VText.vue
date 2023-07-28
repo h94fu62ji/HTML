@@ -1,11 +1,21 @@
 <script>
+// pinia 方法
+import { mapActions } from 'pinia'
+// 自訂 pinia 資料庫
+import indexStatus from '../store/indexStatus';
 export default{
     data(){
         return{
             text: "Hello everymeow!!!",
             isTrue : false
         }
-    }
+    },
+    methods:{
+        ...mapActions(indexStatus,['setLocation'])
+    },
+    mounted() {
+        this.setLocation(2)
+    },
     
 }
 

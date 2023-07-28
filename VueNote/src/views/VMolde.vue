@@ -1,5 +1,8 @@
 <script>
-
+// pinia 方法
+import { mapActions } from 'pinia'
+// 自訂 pinia 資料庫
+import indexStatus from '../store/indexStatus';
 export default{
   // 導入元件的列表
   // components
@@ -17,7 +20,13 @@ export default{
       radioMeal: null,
       
     }
-  }
+  },
+  methods:{
+    ...mapActions(indexStatus,['setLocation'])
+  },
+  mounted() {
+    this.setLocation(1)
+  },
 }
 
 </script>
