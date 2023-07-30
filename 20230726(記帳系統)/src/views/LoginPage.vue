@@ -3,12 +3,13 @@ import { RouterLink } from 'vue-router';
 export default {
 
 }
+
 </script>
 
 <template>
     <div class="all-area">
         <div class="main-area">
-            <h1>Sign Up</h1>
+            <h1>Expense Tracker</h1>
             <div class="input-area">
                 <label for="Account">Account</label>
                 <input type="email" id="Account">
@@ -17,13 +18,9 @@ export default {
                 <label for="Password">Password</label>
                 <input type="password" id="Password">
             </div>
-            <div class="input-area">
-                <label for="RPassword"> Repeat Password</label>
-                <input type="password" id="RPassword">
-            </div>
             <div class="but-area">
-                <RouterLink class="button color1" to="/">Cancel</RouterLink>
-                <button type="button" class="button color2">Log In</button>
+                <RouterLink class="button color1" to="/signup">Sign Up</RouterLink>
+                <RouterLink class="button color2" to="/home">Log In</RouterLink>
             </div>
 
         </div>
@@ -36,31 +33,24 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C7FA5;
 }
 h1{
     text-align: center;
-    color: #FFF;
+    color: #3C7FA5;
     font-size: 2.5rem;
 }
 .input-area{
     width: 350px;
     margin-top: 20px;
     label{
-        color: #FFF;
+        color: #AFB1B6;
     }
     input{
         width: 100%;
         height: 2rem;
         padding-left: 10px;
         border-radius: 10px;
-        border: 1px solid #FFF;
-        color: #FFF;
-        background-color: #3C7FA5;
-        &:focus{
-            background-color: #4ba0d1;
-            border: 1px solid #FFF;
-        }
+        border: 1px solid #AFB1B6;
     }
 }
 .but-area{
@@ -81,8 +71,7 @@ h1{
         background-color: #A1B9C7;
     }
     .color2{
-        background-color: #FFF;
-        color: #3C7FA5;
+        background-color: #3C7FA5;
     }
 }
 
