@@ -1,19 +1,59 @@
 <script>
 import { RouterLink } from 'vue-router'
 import add from '../components/Add.vue'
-import dele from '../components/DeleteBox.vue'
+import databox from '../components/DataBox.vue'
 
 export default {
     components: {
         add,
-        dele,
+        // dele,
+        databox,
     },
     data() {
         return{
+            expense : 0,
             isAdd : false,
-            isDele : true,
+            dataList : [
+                {name:123},{name:123},{name:123
+            },{name:123},{name:123},{name:123
+            },{name:123},{name:123},{name:123
+            },{name:123},{name:123},{name:123
+            },
+            ]
         }
     },
+    methods: {
+        switchAdd(){
+            this.isAdd = !this.isAdd
+        },
+        getInfo(x) {
+            this.dataList.push({name : x[0],money : x[1],type : x[2]})
+            console.log(this.dataList)
+            this.switchAdd()
+        },
+        getDel(x) {
+            console.log("click",x)
+
+            this.dataList = this.dataList.filter(function(item,index){
+                return (index != x)
+            })
+        }
+    },
+    computed: {
+
+        income() {
+            return this.dataList.reduce(function(sum,item){
+                if (item.type){
+                    return sum + item.money}
+                else {
+                    return sum
+                }
+            },0)
+        },
+        balance() {
+            return (this.income - this.expense)
+        },
+    }
 }
 
 </script>
@@ -22,39 +62,34 @@ export default {
     <div class="all-area">
 
         <div class="left-area">
-            <h1 class="title">Expense Tracker</h1>
-            <h1 class="name">Kouhei</h1>
-            <h2>YOUR BALANCE</h2>
-            <h1 class="money">{{ "$" }}</h1>
-
+            <h1>Expense Tracker</h1>
+            <h1>Kouhei</h1>
+            <div>
+                <h2>YOUR BALANCE</h2>
+                <h1 class="money">{{ "$ " + balance }}</h1>
+            </div>
+            <div class="fake"></div>
         </div>
 
+        <div class="fake-left-area"></div>
 
         <div class="right-area">
             <div>
                 <div class="money-area">
                     <div class="money-box color1">
                         <h1>INCOME</h1>
-                        <h1>$</h1>
+                        <h1>{{ "$ " + income }}</h1>
                     </div>
                     <div class="money-box color2">
                         <h1>EXPENSE</h1>
-                        <h1>$</h1>
+                        <h1>{{ "$ " + expense }}</h1>
                     </div>
                 </div>
 
-                <button type="button" class="add">Add transaction</button>
+                <button type="button" class="add" @click="switchAdd">Add transaction</button>
 
                 <div class="data-area">
-                    <div class="box">
-                        <div>
-                            <p>Breakfast</p>
-                        </div>
-                        <div class="right-box">
-                            <p>500$</p>
-                            <button type="button">Delete</button>
-                        </div>
-                    </div>
+                    <databox v-for="(item, index) in dataList" :name="item.name" :money="item.money" :index="index" @event="getDel"/>
                 </div>
                 
             </div>
@@ -64,8 +99,8 @@ export default {
 
     </div>
 
-    <add v-if="isAdd"></add>
-    <dele v-if="isDele"></dele>
+    <add v-if="isAdd" @push="switchAdd" @event="getInfo"/>
+    <!-- <dele v-if="isDele" @push="switchDel" @event="getDel"/> -->
 </template>
 
 <style lang="scss" scoped>
@@ -74,36 +109,44 @@ export default {
     display: flex;
     position: relative;
 }
+.fake-left-area{
+    width: 25vw; height: 100vh;
+}
 .left-area{
+    position: fixed;
+    top: 0;left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #3C7FA5;
     color: #FFF;
-    width: 400px;
-    text-align: center;
+    width: 25vw; height: 100vh;
     h1{
         font-size: 2rem;
+        text-align: center;
     }
-    .title{
-        padding: 200px 0;
-    }
-    .name{
-        padding: 30px 0;
-    }
+
     .money{
-        width: 80%;
         font-size: 2.5rem;
         word-wrap: break-word;
         margin: 0 auto;
+        text-align: center;
+    }
+    .fake{
+        width: 100%;height: 100px;
     }
 }
 .right-area{
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+
     .money-area{
         width: 400px;
         display: flex;
         justify-content: space-between;
+        margin-top: 200px;
         .money-box{
             text-align: center;
         }
@@ -122,31 +165,11 @@ export default {
         padding: 10px 50px;
         border: 0;
         border-radius: 10px;
+        cursor: pointer;
+        user-select: none;
     }
     .data-area{
         width: 400px;
-        .box{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            border: 2px solid #3C7FA5;
-            border-radius: 10px;
-            .right-box{
-                display: flex;
-                align-items: center;
-                border-radius: 10px;
-                button{
-                    margin-left: 10px;
-                    padding: 5px 10px;
-                    background-color: #3C7FA5;
-                    color: #FFF;
-                    border: 0;
-                    border-radius: 5px;
-
-                }
-            }
-        }
     }
 }
 

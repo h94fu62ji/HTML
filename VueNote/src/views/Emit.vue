@@ -4,11 +4,17 @@ export default {
     components: {
         Child
     },
+    data() {
+        return {
+            y : null,
+        }
+    },
     methods: {
         getInfo(x) {
             console.log("GetInfo")
             console.log("接收到資訊了")
             console.log(x)
+            this.y = x
         }
     },
 }
@@ -16,7 +22,7 @@ export default {
 
 <template>
     <h1>Emit</h1>
-    
+    <p>{{ y }}</p>
     <div class="child-area">
         <Child 
         :title="'Emit 練習'" 
