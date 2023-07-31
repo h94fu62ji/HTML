@@ -4,7 +4,7 @@ export default {
     components:{
         dele,
     },
-    props:["name","money","index"],
+    props:["name","money","type","index"],
     data() {
         return {
             isDele : false,
@@ -29,7 +29,7 @@ export default {
             <p>{{ name }}</p>
         </div>
         <div class="right-box">
-            <p>{{ "$" + money}}</p>
+            <p :class="{green : type}">{{ "$" + money}}</p>
             <button type="button" @click="switchDel">Delete</button>
         </div>
     </div>
@@ -48,11 +48,18 @@ export default {
     .text{
         width: 55%;
         word-wrap: break-word;
+        color: #3C7FA5;
     }
     .right-box{
         display: flex;
         align-items: center;
         border-radius: 10px;
+        p{
+            color: #A53C42;
+        }
+        .green{
+            color: #70A53C;
+        }
         button{
             margin-left: 10px;
             padding: 5px 10px;
@@ -65,4 +72,5 @@ export default {
         }
     }
 }
+
 </style>

@@ -9,16 +9,20 @@ export default {
         // dele,
         databox,
     },
+    created() {
+        // localStorage.getItem(this.account) != null || sessionStorage.getItem(this.account) != null 
+         
+    },
     data() {
         return{
-            expense : 0,
             isAdd : false,
             dataList : [
-                {name:123},{name:123},{name:123
-            },{name:123},{name:123},{name:123
-            },{name:123},{name:123},{name:123
-            },{name:123},{name:123},{name:123
-            },
+                {
+                    name : "getmoney",
+                    money : 40000,
+                    type : true,
+                }
+                
             ]
         }
     },
@@ -44,9 +48,20 @@ export default {
         income() {
             return this.dataList.reduce(function(sum,item){
                 if (item.type){
-                    return sum + item.money}
+                    return sum + item.money
+                }
                 else {
                     return sum
+                }
+            },0)
+        },
+        expense() {
+            return this.dataList.reduce(function(sum,item){
+                if (item.type){
+                    return sum
+                }
+                else {
+                    return sum + item.money
                 }
             },0)
         },
@@ -89,23 +104,23 @@ export default {
                 <button type="button" class="add" @click="switchAdd">Add transaction</button>
 
                 <div class="data-area">
-                    <databox v-for="(item, index) in dataList" :name="item.name" :money="item.money" :index="index" @event="getDel"/>
+                    <databox v-for="(item, index) in dataList" :name="item.name" :money="item.money" :type="item.type" :index="index" @event="getDel"/>
+                    <footer></footer>
                 </div>
                 
             </div>
         </div>
 
-
+        
 
     </div>
-
     <add v-if="isAdd" @push="switchAdd" @event="getInfo"/>
     <!-- <dele v-if="isDele" @push="switchDel" @event="getDel"/> -->
 </template>
 
 <style lang="scss" scoped>
 .all-area{
-    width: 100vw;height: 100vh;
+    width: 98vw;height: 100vh;
     display: flex;
     position: relative;
 }
@@ -122,16 +137,15 @@ export default {
     background-color: #3C7FA5;
     color: #FFF;
     width: 25vw; height: 100vh;
+    text-align: center;
     h1{
         font-size: 2rem;
-        text-align: center;
     }
 
     .money{
         font-size: 2.5rem;
         word-wrap: break-word;
         margin: 0 auto;
-        text-align: center;
     }
     .fake{
         width: 100%;height: 100px;
@@ -172,5 +186,7 @@ export default {
         width: 400px;
     }
 }
-
+footer{
+    width: 100%; height: 200px;
+}
 </style>

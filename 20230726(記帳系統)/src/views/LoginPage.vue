@@ -1,6 +1,48 @@
 <script>
 import { RouterLink } from 'vue-router';
 export default {
+    data() {
+        return {
+            account : "",
+            password : "",
+            mailWarn : false,
+            passWarn : false,
+            apWarn : false,
+        }
+    },
+    mounted(){
+        localStorage.setItem("user","0000")
+        // console.log(localStorage.getItem("user"))
+    },
+    methods:{
+        checkPass(){
+            this.mailWarn = false;
+            this.passWarn = false;
+            this.apWarn = false;
+            let i = 0;
+            if(this.account == "" || this.account == null){
+                this.mailWarn = true;
+                i++;
+            }
+            if(this.password == "" || this.password == null){
+                this.passWarn = true;
+                i++;
+            }
+            if(i == 0 && this.password != localStorage.getItem(this.account)){
+                this.apWarn = true;
+            }
+            else if(this.password == localStorage.getItem(this.account)){
+                this.$router.push("/home");
+            }
+            if(i == 0 && this.password != sessionStorage.getItem(this.account)){
+                this.apWarn = true;
+            }
+            else if(this.password == sessionStorage.getItem(this.account)){
+                this.$router.push("/home");
+            }
+
+        }
+    },
 
 }
 
@@ -12,15 +54,20 @@ export default {
             <h1>Expense Tracker</h1>
             <div class="input-area">
                 <label for="Account">Account</label>
-                <input type="email" id="Account">
+                <label v-if="mailWarn" class="warn">please enter account</label>
+                <input type="email" id="Account" v-model="account">
             </div>
             <div class="input-area">
                 <label for="Password">Password</label>
-                <input type="password" id="Password">
+                <label v-if="passWarn" class="warn">please enter password</label>
+                <input type="password" id="Password" v-model="password">
             </div>
+
+            <p class="apwarn" v-if="apWarn">account or password incorrect</p>
+
             <div class="but-area">
                 <RouterLink class="button color1" to="/signup">Sign Up</RouterLink>
-                <RouterLink class="button color2" to="/home">Log In</RouterLink>
+                <button type="button" class="button color2" @click="checkPass">Log In</button>
             </div>
 
         </div>
@@ -42,8 +89,15 @@ h1{
 .input-area{
     width: 350px;
     margin-top: 20px;
+    position: relative;
     label{
         color: #AFB1B6;
+    }
+    .warn{
+    color: red;
+    font-size: .5rem;
+    position: absolute;
+    top: 2px;right: 0;
     }
     input{
         width: 100%;
@@ -66,6 +120,8 @@ h1{
         text-align: center;
         font-size: 1rem;
         text-decoration: none;
+        cursor: pointer;
+        user-select: none;
     }
     .color1{
         background-color: #A1B9C7;
@@ -73,6 +129,11 @@ h1{
     .color2{
         background-color: #3C7FA5;
     }
+}
+.apwarn{
+    color: red;
+    font-size: 0.5rem;
+    padding-top: 10px;
 }
 
 </style>
