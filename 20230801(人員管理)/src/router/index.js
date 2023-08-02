@@ -28,12 +28,32 @@ const router = createRouter({
           component: () => import('../views/functioinPage/Home.vue')
         },
         {
+          path: 'user-set',
+          component: () => import('../views/functioinPage/UserSet.vue')
+        },
+        {
           path: 'leave',
           component: () => import('../views/functioinPage/Leave.vue')
         },
         {
           path: 'data',
           component: () => import('../views/functioinPage/Data.vue')
+        },
+        {
+          path: 'staffmenu',
+          component: () => import('../views/functioinPage/StaffMenu.vue')
+        },
+        {
+          path: 'staffadd',
+          component: () => import('../views/functioinPage/StaffAdd.vue')
+        },
+        {
+          path: 'staffset',
+          component: () => import('../views/functioinPage/StaffSet.vue')
+        },
+        {
+          path: 'staffmoney',
+          component: () => import('../views/functioinPage/StaffMoney.vue')
         },
       ]
     },

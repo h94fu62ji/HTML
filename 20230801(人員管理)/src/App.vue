@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import HeaderBar from "./components/HeaderBar.vue"
 import FunctionBar from "./components/FunctionBar.vue"
 </script>
@@ -7,7 +7,7 @@ import FunctionBar from "./components/FunctionBar.vue"
 
 <template>
   <HeaderBar/>
-  <router-view/>
+  <RouterView/>
 </template>
 
 

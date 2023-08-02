@@ -6,8 +6,8 @@ export default {
 
 
 <template>
-    <div class="area flex justify-center items-center">
-        <div class="w-96 px-5 py-8 bg-slate-300">
+    <div class="all-area flex justify-center items-center">
+        <div class="w-96 px-5 py-8 color3">
             
             <div class="my-3">
                 <div class="flex items-center justify-between">
@@ -25,7 +25,7 @@ export default {
                 <input type="email" id="id" class="w-full border-2 my-1">
             </div>
             
-            <router-link to="/function" class="bg-slate-600 text-white w-36 py-2 rounded-lg block mx-auto mt-5 text-center">登入</router-link>
+            <router-link to="/function" class="color2 text-white w-36 py-2 rounded-lg block mx-auto mt-5 text-center">登入</router-link>
             
         </div>
     </div>
@@ -33,7 +33,7 @@ export default {
 
 
 <style scoped>
-.area{
+.all-area{
     height: 90vh;
 }
 </style>
