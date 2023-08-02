@@ -7,6 +7,7 @@ import FunctionBar from "./components/FunctionBar.vue"
 
 <template>
   <HeaderBar/>
+  <div class="h-12 w-screen"></div>
   <RouterView/>
 </template>
 

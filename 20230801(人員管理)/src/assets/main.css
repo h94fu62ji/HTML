@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: rgb(156, 174, 200);
+    position: relative;
+}
 .all-area{
     width: 700px;
     margin-left: auto;
@@ -12,17 +17,22 @@
     border: 2px solid green;
 }
 .color1 {
-    background-color: rgb(94, 168, 211);
+    background-color: rgb(104, 145, 169);
 }
 .color2 {
-    background-color: rgb(28, 69, 93);
+    background-color: rgb(35, 60, 75);
 }
 .color3 {
-    background-color: rgb(187, 205, 214);
+    background-color: rgb(214, 241, 255);
 }
 .color4 {
-    background-color: rgb(224, 166, 166);
+    background-color: rgb(254, 203, 203);
 }
 .color5 {
     background-color: rgb(255, 255, 255);
+}
+.text-sb{
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
 }

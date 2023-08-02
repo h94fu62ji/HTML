@@ -25,19 +25,19 @@ const router = createRouter({
       children : [
         {
           path: '',
-          component: () => import('../views/functioinPage/Home.vue')
+          component: () => import('../views/functioinPage/UserHome.vue')
         },
         {
-          path: 'user-set',
+          path: 'userset',
           component: () => import('../views/functioinPage/UserSet.vue')
         },
         {
-          path: 'leave',
-          component: () => import('../views/functioinPage/Leave.vue')
+          path: 'userleave',
+          component: () => import('../views/functioinPage/UserLeave.vue')
         },
         {
-          path: 'data',
-          component: () => import('../views/functioinPage/Data.vue')
+          path: 'userdata',
+          component: () => import('../views/functioinPage/UserData.vue')
         },
         {
           path: 'staffmenu',

@@ -19,9 +19,7 @@ export default {
 </script>
 <template>
     <div class="w-full color3">
-        <h1 class="text-2xl">歡迎 {{ userName }} 工號 {{ user.ID }}</h1>
-        <input type="text" v-model="nameset">
-        <button type="button" @click="setName(nameset)">更換姓名</button>
+        <h1 class="text-4xl">歡迎 {{ userName }} 工號 {{ user.ID }}</h1>
     </div>
 </template>
 <style>
