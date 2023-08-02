@@ -3,7 +3,7 @@
 import { mapActions } from 'pinia'
 // 自訂 pinia 資料庫
 import indexStatus from '../store/indexStatus';
-export default{
+export default {
   // 導入元件的列表
   // components
   // data:function(){}
