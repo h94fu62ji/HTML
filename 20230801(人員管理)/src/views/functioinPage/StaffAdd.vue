@@ -2,9 +2,9 @@
 export default {
     data() {
         return {
-            labelArea : ['w-20','text-sb'],
+            labelArea : ['w-24','text-sb'],
             label : ['m-4','flex','items-center'],
-            input : ['text-center','mx-4','w-48']
+            input : ['text-center','mx-4','w-full']
         }
     },
 }
@@ -77,7 +77,8 @@ export default {
             </div>
             <select name="" id="" :class="input">
                 <option value='true'>在職</option>
-                <option value='false'>停用</option>
+                <option value='false'>停職</option>
+                <option value='false'>離職</option>
             </select>
         </div> -->
 
@@ -87,6 +88,9 @@ export default {
             </div>
             <input type="date" :class="input">
         </div>
+
+        <button type="button" class="color2 btn">確定更改</button>
+
 
     </div>
 </template>

@@ -6,7 +6,7 @@ export default {
 
 
 <template>
-    <div class="w-40 py-4 px-8 color4 rounded-xl">
+    <div class="w-40 py-4 px-8 color5">
         <div>
             <router-link to="/function/" class="link">會員中心</router-link>
             <router-link to="/function/userset" class="link2">基本設定</router-link>
@@ -14,7 +14,9 @@ export default {
             <router-link to="/function/userdata" class="link2">資料查詢</router-link>
         </div>
         <div class="pt-3">
-            <router-link to="/function/staffmenu" class="link">人員管理</router-link>
+            <!-- <router-link to="/function/staffmenu" class="link">人員管理</router-link> -->
+            <h1 class="link">人員管理</h1>
+            <router-link to="/function/staffapprove" class="link2">假單批准</router-link>
             <router-link to="/function/staffadd" class="link2">新增成員</router-link>
             <router-link to="/function/staffset" class="link2">人資異動</router-link>
             <router-link to="/function/staffmoney" class="link2">薪資調整</router-link>

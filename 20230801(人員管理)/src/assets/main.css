@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(156, 174, 200);
+    background-color: rgb(255, 255, 255);
     position: relative;
 }
 .all-area{
@@ -14,25 +14,48 @@ body{
 .area{
     width: 700px;
     margin: 40px auto;
-    border: 2px solid green;
+}
+.btn{
+    color: white;
+    width: 150px;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
 }
 .color1 {
-    background-color: rgb(104, 145, 169);
+    /* hader */
+    background-color: rgb(150, 60, 180);
+    color: white;
 }
 .color2 {
-    background-color: rgb(35, 60, 75);
+    /* button */
+    background-color: rgb(100, 80, 150);
 }
 .color3 {
-    background-color: rgb(214, 241, 255);
+    /* 大區域 */
+    background-color: rgb(255, 255, 255);
 }
 .color4 {
-    background-color: rgb(254, 203, 203);
+    /* 小區域 */
+    background-color: rgb(255, 255, 255);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
 }
 .color5 {
+    /* 功能選單 */
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px black;
 }
 .text-sb{
     text-align: justify;
     text-justify: distribute-all-lines;
     text-align-last: justify;
+}
+input ,select{
+    border: 1px solid gray;
+    border-radius: 5px;
 }

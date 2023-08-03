@@ -8,14 +8,14 @@ export default defineStore("userData",{
         user : {
             ID : 'PK20230801',
             PASSWORD : '277966',
-            UNIT : '501',
+            UNIT : '502',
             LEVEL : 20,
             USE : true,
             data : {
                 name : '蔡孟錤',
                 email : 'h94fu62ji@gmail.com',
-                born : '19980829',
-                in : '20230801',
+                born : '1998-08-29',
+                in : '2023-08-01',
                 working : true,
                 out : '',
                 money : '36000',

@@ -25,7 +25,7 @@ export default {
                 <input type="email" id="id" class="w-full border-2 my-1">
             </div>
             
-            <router-link to="/function" class="color2 text-white w-36 py-2 rounded-lg block mx-auto mt-5 text-center">登入</router-link>
+            <router-link to="/function" class="color2 btn">登 入</router-link>
             
         </div>
     </div>

@@ -40,8 +40,8 @@ const router = createRouter({
           component: () => import('../views/functioinPage/UserData.vue')
         },
         {
-          path: 'staffmenu',
-          component: () => import('../views/functioinPage/StaffMenu.vue')
+          path: 'staffapprove',
+          component: () => import('../views/functioinPage/StaffApprove.vue')
         },
         {
           path: 'staffadd',
