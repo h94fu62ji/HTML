@@ -13,7 +13,7 @@ export default {
                     <label for="id">請輸入工號</label>
                     <label for="id">簽到成功✔️</label>
                 </div>
-                <input type="email" id="id" class="w-full border-2 my-1">
+                <input type="email" id="id" class="w-full border-2 my-1 py-2">
             </div>
             <h1 class="text-center">現在時間 2023/08/01 08:55:00</h1>
             <div class="flex mt-4">

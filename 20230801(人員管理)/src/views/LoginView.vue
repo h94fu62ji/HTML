@@ -14,7 +14,7 @@ export default {
                     <label for="id">請輸入工號</label>
                     <label for="id">無此工號</label>
                 </div>
-                <input type="email" id="id" class="w-full border-2 my-1">
+                <input type="email" id="id" class="w-full border-2 my-1 py-2">
             </div>
 
             <div class="my-3">
@@ -22,7 +22,7 @@ export default {
                     <label for="id">請輸入密碼</label>
                     <label for="id">密碼錯誤</label>
                 </div>
-                <input type="email" id="id" class="w-full border-2 my-1">
+                <input type="email" id="id" class="w-full border-2 my-1 py-2">
             </div>
             
             <router-link to="/function" class="color2 btn">登 入</router-link>

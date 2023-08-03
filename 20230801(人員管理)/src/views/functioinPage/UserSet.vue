@@ -7,7 +7,7 @@ export default {
         return {
             labelArea: ['w-24', 'text-sb'],
             label: ['m-4', 'flex', 'items-center'],
-            input: ['text-center', 'mx-4', 'w-full'],
+            input: ['text-center', 'mx-4', 'w-full','py-2'],
             popwindow: false,
         }
     },
