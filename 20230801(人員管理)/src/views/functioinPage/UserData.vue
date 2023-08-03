@@ -12,7 +12,7 @@ export default {
     },
     computed: {
         // 參數 資料庫 要取用的 state / getters
-        ...mapState(indexStore , ['user','userName']),
+        ...mapState(indexStore, ['user','userName','labelArea','label','input','dataList'])
     },
     methods: {
         // 參數 資料庫 要取用的 actions(methods)

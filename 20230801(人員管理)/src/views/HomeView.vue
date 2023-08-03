@@ -1,14 +1,15 @@
 <script>
+import PhotoArea from '../components/PhotoArea.vue';
 export default {
-    
+    components: {
+        PhotoArea
+    }
 }
 </script>
 
 <template>
     <div class="all-area">
-        <div class="area h-96 bg-slate-400">
-            <p>活動、圖片區</p>
-        </div>
+        <PhotoArea/>
         <hr class="border-black border-1">
 
         <div class="area bg-slate-400 p-10">

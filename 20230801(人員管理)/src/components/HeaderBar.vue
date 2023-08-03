@@ -1,18 +1,26 @@
 <script>
+import { mapActions , mapState } from 'pinia'
+import indexStore from '../store/Store'
 export default {
-    
+    computed: {
+        // 參數 資料庫 要取用的 state / getters
+        ...mapState(indexStore, [])
+    },
 }
 </script>
 
 
 <template>
-    <div class="fixed top-0 right-0">
-        <div class="h-12 w-screen color1 shadow-xl">
-            <div class="h-12 all-area flex justify-between items-center">
-                <router-link to="/" class="h-10 w-24 bg-white"></router-link>
+    <div class="fixed top-0 right-0 z-10">
+        <div class="h-14 w-screen color1 shadow-xl">
+            <div class="h-14 all-area flex justify-between items-center">
+                <div class="flex items-end">
+                    <router-link to="/" class="text-2xl">APEX股份有限公司</router-link>
+                    <p class="text-xs pl-2">人員系統</p>
+                </div>
                 <div>
-                    <router-link to="/login" class="text-xl pl-4">登入</router-link>
-                    <router-link to="/check" class="text-xl pl-4">簽到</router-link>
+                    <router-link to="/login" class="text-xl">登入</router-link>
+                    <router-link to="/check" class="text-xl pl-6">簽到</router-link>
                 </div>
             </div>
         </div>

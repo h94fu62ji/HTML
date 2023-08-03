@@ -1,12 +1,15 @@
 <script>
+
+import { mapActions , mapState } from 'pinia'
+import indexStore from '../../store/Store'
 export default {
     data() {
         return {
-            labelArea : ['w-24','text-sb'],
-            label : ['m-4','flex','items-center'],
-            input : ['text-center','mx-4','w-full','py-2'],
-            dataList : ['flex','items-center','justify-between'],
         }
+    },
+    computed: {
+        // 參數 資料庫 要取用的 state / getters
+        ...mapState(indexStore, ['labelArea','label','input','dataList'])
     },
 }
 </script>

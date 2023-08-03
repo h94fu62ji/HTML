@@ -5,16 +5,13 @@ import PopWindow from '../../components/PopWindow.vue'
 export default {
     data() {
         return {
-            labelArea: ['w-24', 'text-sb'],
-            label: ['m-4', 'flex', 'items-center'],
-            input: ['text-center', 'mx-4', 'w-full','py-2'],
             popwindow: false,
         }
     },
 
     computed: {
         // 參數 資料庫 要取用的 state / getters
-        ...mapState(indexStore, ['user'])
+        ...mapState(indexStore, ['user','labelArea','label','input','dataList'])
     },
     methods: {
         // 參數 資料庫 要取用的 actions(methods)

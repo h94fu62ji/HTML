@@ -1,4 +1,5 @@
 // 狀態資料庫
+import moment from "moment/moment";
 import { defineStore } from "pinia";
 
 // 兩個參數 資料庫名稱 資料庫內容
@@ -23,11 +24,20 @@ export default defineStore("userData",{
             },
             verifyCode : "",
             bill : {},
-        }
+        },
+        // 時間區
+        today : moment().format('YYYY/MM/DD hh:mm:ss'),
+
+
+        // CSS區
+        labelArea : ['w-24','text-sb'],
+        label : ['m-4','flex','items-center'],
+        input : ['text-center','mx-4','w-full','py-2','rounded-lg'],
+        dataList : ['flex','items-center','justify-between'],
     }),
     // computed 顯示在畫面上的臨時變數
     getters: {
-        userName: (state) => state.user.data.name
+        userName: (state) => state.user.data.name,
     },
     // methods 方法
     actions: {
@@ -38,7 +48,13 @@ export default defineStore("userData",{
             if(x != "" || x != null){
                 this.user.data.name = x;
             }
-        }
+        },
+        getNewTime(){
+            this.today = moment().format('YYYY/MM/DD hh:mm:ss')
+            setTimeout(() => {
+                this.getNewTime()
+            }, 1000);
+        },
     }
 
 });

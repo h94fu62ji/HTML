@@ -1,4 +1,6 @@
 <script>
+import { mapActions , mapState } from 'pinia'
+import indexStore from '../store/Store'
 export default {
     
 }
@@ -12,17 +14,17 @@ export default {
             <div class="my-3">
                 <div class="flex items-center justify-between">
                     <label for="id">請輸入工號</label>
-                    <label for="id">無此工號</label>
+                    <label for="id" class="text-red-600 text-xs">查無工號</label>
                 </div>
-                <input type="email" id="id" class="w-full border-2 my-1 py-2">
+                <input type="email" id="id" class="w-full my-1 py-2 rounded-lg">
             </div>
 
             <div class="my-3">
                 <div class="flex items-center justify-between">
                     <label for="id">請輸入密碼</label>
-                    <label for="id">密碼錯誤</label>
+                    <label for="id" class="text-red-600 text-xs">密碼錯誤</label>
                 </div>
-                <input type="email" id="id" class="w-full border-2 my-1 py-2">
+                <input type="email" id="id" class="w-full my-1 py-2 rounded-lg">
             </div>
             
             <router-link to="/function" class="color2 btn">登 入</router-link>
