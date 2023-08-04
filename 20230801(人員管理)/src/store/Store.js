@@ -27,6 +27,8 @@ export default defineStore("userData",{
         },
         // 時間區
         today : moment().format('YYYY/MM/DD hh:mm:ss'),
+        // 彈出視窗
+        popwindow : false,
 
 
         // CSS區
@@ -54,6 +56,9 @@ export default defineStore("userData",{
             setTimeout(() => {
                 this.getNewTime()
             }, 1000);
+        },
+        switchPop(){
+            this.popwindow = !this.popwindow
         },
     }
 

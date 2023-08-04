@@ -17,12 +17,12 @@ export default {
         // 參數 資料庫 要取用的 actions(methods)
         ...mapActions(indexStore , []),
         changePhoto(){
-            let left = this.photoIndex * -700
+            let left = this.photoIndex * -750
             this.photoLeft = 'left:'+left+'px;'
         },
         changeR(){
             this.photoIndex++
-            if (this.photoIndex >= 3){
+            if (this.photoIndex >= 4){
                 this.photoIndex = 0
             }
             this.changePhoto()
@@ -30,7 +30,7 @@ export default {
         changeL(){
             this.photoIndex--
             if (this.photoIndex < 0){
-                this.photoIndex = 2
+                this.photoIndex = 3
             }
             this.changePhoto()
         },
@@ -46,11 +46,15 @@ export default {
             this.photoIndex = 2
             this.changePhoto()
         },
+        change4(){
+            this.photoIndex = 3
+            this.changePhoto()
+        },
         changeAuto(){
             this.changeR()
             setTimeout(() => {
                 this.changeAuto()
-            },7000)
+            },6000)
         }
     },
     mounted() {
@@ -68,14 +72,16 @@ export default {
             <div class="photo bg-slate-300"></div>
             <div class="photo bg-slate-400"></div>
             <div class="photo bg-slate-500"></div>
+            <div class="photo bg-slate-600"></div>
         </div>
         
         <button type="button" class="w-10 h-10 rounded-full colorb opacity-50 hover:opacity-100 absolute top-44 left-2" @click="changeL">&lt;</button>
         <button type="button" class="w-10 h-10 rounded-full colorb opacity-50 hover:opacity-100 absolute top-44 right-2" @click="changeR">&gt;</button>
-        <div class="absolute bottom-2 left-72">
-            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100" @click="change1"></button>
-            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100 mx-2" @click="change2"></button>
-            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100" @click="change3"></button>
+        <div class="absolute bottom-2 right-1/2 translate-x-1/2">
+            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100 mx-1" @click="change1"></button>
+            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100 mx-1" @click="change2"></button>
+            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100 mx-1" @click="change3"></button>
+            <button type="button" class="w-10 h-2 rounded-full colorb opacity-50 hover:opacity-100 mx-1" @click="change4"></button>
         </div>
     </div>
 </div>
@@ -85,7 +91,7 @@ export default {
 
 <style scoped>
 .photo{
-    width: 700px;
+    width: 750px;
     height: 400px;
     flex-shrink: 0;
 }

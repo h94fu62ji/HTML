@@ -2,7 +2,16 @@
 import { mapActions , mapState } from 'pinia'
 import indexStore from '../store/Store'
 export default {
-    
+    methods:{
+        // 返回上一頁
+        // goBack() {
+        //     //  數字 -1 代表返回上一步
+        //     return this.$router.go(-1);
+        // },
+
+        // 參數 資料庫 要取用的 actions(methods)
+        ...mapActions(indexStore , ['switchPop'])
+    },
 }
 </script>
 
@@ -27,7 +36,9 @@ export default {
                 <input type="email" id="id" class="w-full my-1 py-2 rounded-lg">
             </div>
             
-            <router-link to="/function" class="color2 btn">登 入</router-link>
+            <router-link to="/function">
+                <button type="button" class="color2 btn" @click="switchPop()">登 入</button>
+            </router-link>
             
         </div>
     </div>

@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         // 參數 資料庫 要取用的 actions(methods)
-        ...mapActions(indexStore, ['setName']),
+        ...mapActions(indexStore, ['setName','switchPop']),
         switchPop(){
             this.popwindow = !this.popwindow
         }
@@ -34,9 +34,10 @@ export default {
             <div :class="labelArea">
                 <label for="">工號</label>
             </div>
-            <input v-model="user.ID" type="text" :class="input" disabled="disabled">
+            <input v-model="user.ID" type="text" :class="input" disabled="disabled" class="cursor-not-allowed bg-slate-100">
             <!-- disabled="disabled" 禁止複製編輯 -->
             <!-- readonly="readonly" 可複製不可編輯-->
+            <!-- cursor-not-allowed 游標:禁止 -->
         </div>
         
         <div :class="label">

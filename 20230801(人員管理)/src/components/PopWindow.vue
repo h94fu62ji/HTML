@@ -11,7 +11,7 @@ export default {
 
 
 <template>
-    <div class="bg-gray-400/80 w-screen h-screen fixed top-0 left-0 flex justify-center items-center">
+    <div class="bg-gray-400/80 w-screen h-screen fixed top-0 left-0 flex justify-center items-center popanime">
         <div class="bg-white text-center p-10 rounded-xl">
             <h1 class="pb-5 text-xl">{{ title }}</h1>
             <p class="pb-5">{{ text }}</p>

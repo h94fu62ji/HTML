@@ -1,13 +1,23 @@
 <script>
 import { mapActions , mapState } from 'pinia'
 import indexStore from '../../store/Store'
+import TableBar from '../../components/TableBar.vue'
 export default {
+    components:{
+        TableBar
+    },
     data() {
         return {
-            labelArea : ['w-24','text-sb'],
-            label : ['m-4','flex','items-center'],
-            input : ['text-center','mx-4','w-full','py-2'],
-            dataList : ['flex','items-center','justify-between'],
+            dataTitle1: ['日期','上班時間','下班時間','出勤時數'],
+            dataText1: [
+                {
+                }
+            ],
+            dataTitle2: ['本薪','加班費','餐費','獎金','總金額'],
+            dataText2: [
+                {
+                }
+            ],
         }
     },
     computed: {
@@ -35,15 +45,8 @@ export default {
                 </select>
             </div>
 
-            <div class="h-52 color4 m-4 ">
-                <div :class="dataList">
-                    <h1 style="width: 17%;">日期</h1>
-                    <h1 style="width: 20%;">丨上班時間</h1>
-                    <h1 style="width: 20%;">丨下班時間</h1>
-                    <h1 style="width: 20%;">丨出勤時數</h1>
-                    <h1 style="width: 23%;">丨加班時數</h1>
-                </div>
-            </div>
+            <TableBar :title="dataTitle1"/>
+
         </div>
 
         <div>
@@ -58,16 +61,9 @@ export default {
                 </select>
             </div>
             
-            <div class="h-52 color4 m-4 ">
-                <div :class="dataList">
-                    <h1 style="width: 17%;">本薪</h1>
-                    <h1 style="width: 20%;">丨加班費</h1>
-                    <h1 style="width: 20%;">丨餐費</h1>
-                    <h1 style="width: 20%;">丨獎金</h1>
-                    <h1 style="width: 23%;">丨總金額</h1>
-                </div>
-            </div>
+            <TableBar :title="dataTitle2"/>
         </div>
+        
     </div>
 </template>
 <style>

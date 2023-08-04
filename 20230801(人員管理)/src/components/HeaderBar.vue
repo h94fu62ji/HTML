@@ -2,6 +2,11 @@
 import { mapActions , mapState } from 'pinia'
 import indexStore from '../store/Store'
 export default {
+    data() {
+        return {
+            
+        }
+    },
     computed: {
         // 參數 資料庫 要取用的 state / getters
         ...mapState(indexStore, [])
@@ -15,12 +20,14 @@ export default {
         <div class="h-14 w-screen color1 shadow-xl">
             <div class="h-14 all-area flex justify-between items-center">
                 <div class="flex items-end">
-                    <router-link to="/" class="text-2xl">APEX股份有限公司</router-link>
-                    <p class="text-xs pl-2">人員系統</p>
+                    <router-link to="/" class="text-2xl select-none">APEX股份有限公司</router-link>
+                    <p class="text-xs select-none pl-2">人員系統</p>
                 </div>
                 <div>
-                    <router-link to="/login" class="text-xl">登入</router-link>
-                    <router-link to="/check" class="text-xl pl-6">簽到</router-link>
+                    <router-link to="/login" class="text-xl select-none">會員中心</router-link>
+                    
+                    <!-- 登入 -->
+                    <router-link to="/check" class="text-xl pl-6 select-none">簽到</router-link>
                 </div>
             </div>
         </div>
@@ -29,7 +36,5 @@ export default {
 
 
 <style scoped>
-.d{
-    position: fixed;
-}
+
 </style>

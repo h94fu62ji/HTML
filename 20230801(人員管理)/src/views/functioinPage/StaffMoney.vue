@@ -1,10 +1,18 @@
 <script>
 import { mapActions , mapState } from 'pinia'
 import indexStore from '../../store/Store'
+import TableBar from '../../components/TableBar.vue'
 export default {
+    components:{
+        TableBar
+    },
     data() {
         return {
-
+            dataTitle: ['單位','工號','姓名','資料'],
+            dataText: [
+                {
+                }
+            ]
         }
     },
     computed: {
@@ -26,13 +34,9 @@ export default {
 
         <button type="button" class="color2 btn">搜 尋</button>
         
-        <div class="h-96 color4 m-4 ">
-            <div :class="dataList">
-                <h1 style="width: 17%;">工號</h1>
-                <h1 style="width: 20%;">丨姓名</h1>
-                <h1 style="width: 63%;">丨資料</h1>
-            </div>
-        </div>
+
+        <TableBar :title="dataTitle"/>
+
     </div>
 </template>
 <style>
