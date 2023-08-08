@@ -9,8 +9,11 @@ export default {
     },
     computed: {
         // 參數 資料庫 要取用的 state / getters
-        ...mapState(indexStore, [])
+        ...mapState(indexStore, ['login']),
     },
+    methods: {
+        ...mapActions(indexStore, ['switchLogin']),
+    }
 }
 </script>
 
@@ -23,10 +26,11 @@ export default {
                     <router-link to="/" class="text-2xl select-none">APEX股份有限公司</router-link>
                     <p class="text-xs select-none pl-2">人員系統</p>
                 </div>
-                <div>
+                <div class="flex items-end">
                     <router-link to="/login" class="text-xl select-none">會員中心</router-link>
-                    
-                    <!-- 登入 -->
+                    <!-- v-if="login"  -->
+                    <button type="button" v-if="login" class="text-xl pl-6  select-none" @click="switchLogin()">登出</button>
+
                     <router-link to="/check" class="text-xl pl-6 select-none">簽到</router-link>
                 </div>
             </div>

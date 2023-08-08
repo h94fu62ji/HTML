@@ -6,6 +6,7 @@ import { defineStore } from "pinia";
 export default defineStore("userData",{
     // data 資料
     state:() => ({
+        login : true,
         user : {
             ID : 'PK20230801',
             PASSWORD : '277966',
@@ -59,6 +60,9 @@ export default defineStore("userData",{
         },
         switchPop(){
             this.popwindow = !this.popwindow
+        },
+        switchLogin(){
+            this.login = !this.login
         },
     }
 

@@ -2,6 +2,11 @@
 import { mapActions , mapState } from 'pinia'
 import indexStore from '../store/Store'
 export default {
+    computed: {
+        // 參數 資料庫 要取用的 state / getters
+        ...mapState(indexStore, ['login']),
+    },
+
     methods:{
         // 返回上一頁
         // goBack() {
@@ -10,9 +15,20 @@ export default {
         // },
 
         // 參數 資料庫 要取用的 actions(methods)
-        ...mapActions(indexStore , ['switchPop'])
+        ...mapActions(indexStore , ['switchPop']),
+
+        jumpPage() {
+            if (this.login == false) {
+                this.$router.push("/function")
+            }
+            
+        },
+    },
+    created() {
+        this.jumpPage()
     },
 }
+
 </script>
 
 
