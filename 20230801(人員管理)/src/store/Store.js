@@ -6,7 +6,7 @@ import { defineStore } from "pinia";
 export default defineStore("userData",{
     // data 資料
     state:() => ({
-        login : true,
+        login : false,
         user : {
             ID : 'PK20230801',
             PASSWORD : '277966',

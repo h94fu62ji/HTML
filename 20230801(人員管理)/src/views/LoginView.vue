@@ -15,10 +15,10 @@ export default {
         // },
 
         // 參數 資料庫 要取用的 actions(methods)
-        ...mapActions(indexStore , ['switchPop']),
+        ...mapActions(indexStore , ['switchPop','switchLogin']),
 
         jumpPage() {
-            if (this.login == false) {
+            if (this.login == true) {
                 this.$router.push("/function")
             }
             
@@ -53,7 +53,7 @@ export default {
             </div>
             
             <router-link to="/function">
-                <button type="button" class="color2 btn" @click="switchPop()">登 入</button>
+                <button type="button" class="color2 btn" @click="switchPop(),switchLogin()">登 入</button>
             </router-link>
             
         </div>

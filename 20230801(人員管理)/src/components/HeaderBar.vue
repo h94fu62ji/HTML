@@ -13,6 +13,10 @@ export default {
     },
     methods: {
         ...mapActions(indexStore, ['switchLogin']),
+
+        jumpPage() {
+            this.$router.push("/")
+        },
     }
 }
 </script>
@@ -29,7 +33,7 @@ export default {
                 <div class="flex items-end">
                     <router-link to="/login" class="text-xl select-none">會員中心</router-link>
                     <!-- v-if="login"  -->
-                    <button type="button" v-if="login" class="text-xl pl-6  select-none" @click="switchLogin()">登出</button>
+                    <button type="button" v-if="login" class="text-xl pl-6  select-none" @click="switchLogin(),jumpPage()">登出</button>
 
                     <router-link to="/check" class="text-xl pl-6 select-none">簽到</router-link>
                 </div>
