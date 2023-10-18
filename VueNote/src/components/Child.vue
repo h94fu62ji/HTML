@@ -2,10 +2,10 @@
 export default {
     // 接收父層變數
     // 接口
-    props:["title" ,"text"],
+    props: ["title", "text"],
     data() {
         return {
-            emitText : "",
+            emitText: "",
         }
     },
     // 方法
@@ -30,7 +30,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.wrap{
+.wrap {
     border: 2px solid black;
     width: 300px;
     margin: 2rem 0;

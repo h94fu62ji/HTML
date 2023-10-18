@@ -1,6 +1,6 @@
 <script>
 export default {
-    
+
 }
 </script>
 
@@ -9,7 +9,7 @@ export default {
     <div class="w-40 py-4 px-8 color5">
         <div>
             <router-link to="/function/" class="link">會員中心</router-link>
-            <router-link to="/function/userset" class="link2">基本設定</router-link>
+            <router-link to="/function/userset" class="link2">基本資料</router-link>
             <router-link to="/function/userleave" class="link2">請假申請</router-link>
             <router-link to="/function/userdata" class="link2">資料查詢</router-link>
         </div>
@@ -26,12 +26,13 @@ export default {
 
 
 <style scoped>
-.link{
+.link {
     display: block;
     margin: 10px 0;
     font-weight: bolder;
 }
-.link2{
+
+.link2 {
     display: block;
     margin: 5px 0 5px 20px;
 }
