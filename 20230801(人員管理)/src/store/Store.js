@@ -6,16 +6,12 @@ import { defineStore } from "pinia";
 export default defineStore("userData",{
     // data 資料
     state:() => ({
+        // 登入狀態
         login : false,
-        // user : {
-        //     verifyCode : "",
-        //     bill : {},
-        // },
+        // 連線網址
         URL: "http://localhost:8080/",
         // 彈出視窗
         popwindow : false,
-
-
         // CSS區
         labelArea : ['w-24','text-sb'],
         label : ['m-4','flex','items-center'],

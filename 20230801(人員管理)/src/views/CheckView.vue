@@ -46,12 +46,39 @@ export default {
                     console.error("Error:", error)
                 });
         },
-        checkIn(is) {
+        checkIn() {
             const data = {
                 userId: this.userId,
-                inOut: is,
             }
             fetch(this.URL + "check_in", {
+                method: "POST", // 請求型態
+                headers: { // 必要文件
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+                // 轉成JSON
+                body: JSON.stringify(data) // 要傳送的資料
+            })
+                .then(res => res.json()) // 回傳資料轉成可讀取
+                .then(data => {
+                    console.log(data)
+                    if (data.code == "200" || data.mesg == "data existed") {
+                        this.errorText = false
+                        this.text = "操作成功"
+                        this.switchPop()
+                        return
+                    }
+                    this.errorText = true
+                })
+                .catch(error => {
+                    console.error("Error:", error)
+                });
+        },
+        checkOut() {
+            const data = {
+                userId: this.userId,
+            }
+            fetch(this.URL + "check_out", {
                 method: "POST", // 請求型態
                 headers: { // 必要文件
                     'Content-Type': 'application/json'
@@ -92,8 +119,8 @@ export default {
             </div>
             <h1 class="text-center">{{ "現在時間 " + today }}</h1>
             <div class="flex mt-4">
-                <button type="button" class="color2 btn" @click="checkIn(true)">簽 到</button>
-                <button type="button" class="color2 btn" @click="checkIn(false)">簽 退</button>
+                <button type="button" class="color2 btn" @click="checkIn">簽 到</button>
+                <button type="button" class="color2 btn" @click="checkOut">簽 退</button>
             </div>
 
         </div>
