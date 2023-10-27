@@ -4,22 +4,23 @@ import TableBar from '../components/TableBar.vue';
 export default {
     data() {
         return {
-            newsTitle : ['標題','時間','內文'],
-            newsText :[
+            newsTitle: ['title', 'time', 'text'],
+            newsTitleName: { title: '標題', time: '時間', text: '內文' },
+            newsText: [
                 {
-                標題 : "08/04颱風假",
-                時間 : "08/03",
-                內文 : "08/04 全體員工放假一日",
+                    title: "08/04颱風假",
+                    time: "08/03",
+                    text: "08/04 全體員工放假一日",
                 },
                 {
-                標題 : "年度薪資調漲",
-                時間 : "07/30",
-                內文 : "08/05 薪資調漲幅度公告",
+                    title: "年度薪資調漲",
+                    time: "07/30",
+                    text: "08/05 薪資調漲幅度公告",
                 },
                 {
-                標題 : "施工事項",
-                時間 : "07/29",
-                內文 : "B棟入口施工，預計時間8/15~8/20",
+                    title: "施工事項",
+                    time: "07/29",
+                    text: "B棟入口施工，預計時間8/15~8/20",
                 },
             ]
         }
@@ -33,19 +34,15 @@ export default {
 
 <template>
     <div class="all-area">
-        <PhotoArea/>
+        <PhotoArea />
         <hr class="border-black border-1">
 
         <div class="area">
             <h1>最新消息 ❗❗</h1>
-            <TableBar :title="newsTitle" :text="newsText"/>
+            <TableBar :title="newsTitle" :text="newsText" :titleName="newsTitleName" />
         </div>
-        
-    </div>
-    
 
+    </div>
 </template>
 
-<style scoped>
-    
-</style>
+<style scoped></style>

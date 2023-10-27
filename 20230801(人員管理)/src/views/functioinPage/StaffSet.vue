@@ -1,14 +1,14 @@
 <script>
-import { mapActions , mapState } from 'pinia'
+import { mapActions, mapState } from 'pinia'
 import indexStore from '../../store/Store'
 import TableBar from '../../components/TableBar.vue'
 export default {
-    components:{
+    components: {
         TableBar
     },
     data() {
         return {
-            dataTitle: ['單位','工號','姓名','資料'],
+            dataTitle: ['單位', '工號', '姓名', '資料'],
             dataText: [
                 {
                 }
@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         // 參數 資料庫 要取用的 state / getters
-        ...mapState(indexStore, ['labelArea','label','input','dataList'])
+        ...mapState(indexStore, ['labelArea', 'label', 'input', 'dataList'])
     },
 }
 </script>
@@ -34,10 +34,8 @@ export default {
 
         <button type="button" class="color2 btn">搜 尋</button>
 
-        <TableBar :title="dataTitle"/>
+        <!-- <TableBar :title="dataTitle"/> -->
 
     </div>
 </template>
-<style>
-    
-</style>
+<style></style>

@@ -30,7 +30,7 @@ export default {
             })
                 .then(res => res.json()) // 回傳資料轉成可讀取
                 .then(data => {
-                    // console.log(data)
+                    console.log(data)
                     if (data.code == "200") {
                         this.userData = data.userInfo
                     }
@@ -100,8 +100,8 @@ export default {
                 <label for="">權限</label>
             </div>
             <select v-model="userData.level" :class="input">
-                <option value="director">主管</option>
-                <option value="staff">員工</option>
+                <option value="2">主管</option>
+                <option value="3">員工</option>
             </select>
         </div>
 
@@ -129,11 +129,11 @@ export default {
             <input v-model="userData.arriveDate" type="date" :class="input">
         </div>
 
-        <div :class="label">
+        <div :class="label" v-if="userData.resignDate != null">
             <div :class="labelArea">
                 <label for="">離職日</label>
             </div>
-            <input type="date" :class="input">
+            <input v-model="userData.resignDate" type="date" :class="input">
         </div>
 
         <!-- <button @click="switchPop()" type="button" class="color2 btn">確定更改</button> -->

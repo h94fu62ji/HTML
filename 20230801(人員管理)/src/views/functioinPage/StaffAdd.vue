@@ -179,8 +179,8 @@ export default {
                 <label for="">權限</label>
             </div>
             <select name="" id="" :class="input" v-model="level" :style="levelStyle">
-                <option value="director">主管</option>
-                <option value="staff">員工</option>
+                <option :value="2">主管</option>
+                <option :value="3">員工</option>
             </select>
         </div>
 
